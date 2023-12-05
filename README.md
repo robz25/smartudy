@@ -13,7 +13,7 @@ Welcome to Smartudy. It is a project to learn with your style. The working group
 
 A learning platform that leverages artificial intelligence to streamline the development of study materials. 
 
-#How Smartudy reimagine the Future of Education?
+## How Smartudy reimagine the Future of Education?
 Smartudy includes the extraction of succinct text summaries from various text sources or files, enhancing the accessibility and comprehensibility of the content.
 In addition, the platform features audio generation capabilities, catering to diverse learning styles and promoting inclusivity. 
 This innovative approach enriches the learning experience by delivering tailored educational resources, thereby accommodating individual learning preferences and needs.
