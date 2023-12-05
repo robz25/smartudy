@@ -2,7 +2,7 @@
 
 Is a web development project to help students achieve more by the use of Azure and its AI tools.
 
-Browse this project! [Smartudy](https://http://smartudy.online/)
+Browse this project! [Smartudy](https://smartudy.online/)
 
 Welcome to Smartudy. It is a project to learn with your style. The working group is formed by Robin Gonzalez and Alisson Navarro, technology learners who put hands on action. 
 
@@ -37,3 +37,5 @@ Now we are going to try our Demo.
 1.	To view the details of a summary, click on the desired summary in the “Saved Summaries” page.
 2.	To play the audio version of the summary, click on the play symbol :arrow_forward:.
 3.	You can edit or delete the topic using the “Edit” and “Delete” buttons located below the entry details.
+
+Visit our page
