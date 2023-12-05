@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <body>
+        <!-- List of uploaded documents -->
+        {% if documents %}
+            
+            <table>
+                {% for document in documents %}
+                <tr>
+                <td>{{ document.docfile.name }}</td>
+                <td>
+                    <form method="post" action="{% url 'delete_document' document.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger mx-1" >Delete file</button>
+                    </form>
+                </td>
+                <td>
+                    <form method="post" action="{% url 'get_text_from_file' document.id %}">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-primary mx-1">Generate summary</button>
+                    </form>
+                </td>
+            </tr>
+                    
+                {% endfor %}
+            
+        </table>
+        {% else %}
+            <p>No files uploaded.</p>
+        {% endif %}
+
+        <!-- Upload form. Note enctype attribute! -->
+        <form action="{% url "my-view" %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ message }}
+
+            <hr>
+            <p>{{ form.non_field_errors }}
+                {{ form.docfile.label_tag }} {{ form.docfile.help_text }}
+                
+                {{ form.docfile.errors }}
+                {{ form.docfile }}
+            </p>
+
+            <br>
+
+            <p><input type="submit" value="Upload selected file"  class="btn btn-secondary mx-1"/></p>
+            <hr>
+            {{ form.title.label_tag }} {{ form.title }}
+        </form>
+
+        {% if messages %}
+        <div id="message-banner">
+            {% for message in messages %}
+            <div class="message {{ message.tags }} success_message">{{ message }}</div>
+            {% endfor %}
+        </div>
+        {% endif %}
+        <script>
+            // get the message banner element
+            var messageBanner = document.getElementById("message-banner");
+            // set a timeout function to hide the message banner after 3 seconds
+            setTimeout(function() {
+                messageBanner.style.display = "none";
+            }, 3000);
+        </script>
+        
+    </body>
+
+{% endblock %}

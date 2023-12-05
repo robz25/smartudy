@@ -1,0 +1,7 @@
+ul.errorlist {display:none}
+
+.success_message {
+    font-weight: bold;
+    color: darkgreen;
+    background-color: lightgreen;
+}

@@ -1,0 +1,57 @@
+{% load static %}
+<html>
+    <head>
+        <title>Smartudy</title>
+        {% comment %} <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/> {% endcomment %}
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/minty/bootstrap.min.css" integrity="sha384-H4X+4tKc7b8s4GoMrylmy2ssQYpDHoqzPa9aKXbDwPoPUA3Ra8PA5dGzijN+ePnH" crossorigin="anonymous">
+        <link rel="icon"href="{% static 'icon.png' %}">
+        <style>
+            .navbar {
+                height: 50vh;
+                overflow: auto;
+            }
+            .navbar h5 {
+                display: flex;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <!--<a href="https://www.flaticon.com/free-icons/study" title="study icons">Study icons created by Freepik - Flaticon</a>-->
+    <body style="background-color:#ACCCE1;">
+      <div class="row d-flex">
+        <div class="col-12 col-md-2 col-sm-12 bg-light navbar" style="width: 200px;">
+          <div class="my-5 text-center container"> 
+           
+            <!-- Add your image here -->
+            <img src="{% static 'images/amaretto-01.png' %}" class="mx-auto d-block" alt="Logo" style="width: 150px;">
+            
+          </div>
+          
+          <ul class="nav flex-column">
+            <li><h5 class="nav-item">Smartudy</h5></li>
+            <li class="nav-item">
+              <a class="nav-link" href="/home">Homepage</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/smart/notes/new">New summary from text</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/smart/notes/upload">New summary from file</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/smart/notes">Saved summaries</a>
+            </li>
+          </ul>
+          <div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-10 col-sm-12 flex-grow-1">
+          <div class="my-5 text-center container"> 
+            {% block content %}
+            {% endblock %}
+          </div>
+        </div>
+      </div>
+    </body>
+</html>

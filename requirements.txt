@@ -1,0 +1,13 @@
+django
+azure-core
+azure-ai-ml
+azure-identity
+azure-identity
+azure-cognitiveservices-vision-computervision
+azure-ai-textanalytics
+python-decouple # use .env variables
+python-dotenv # use .env variables
+pillow # ocr
+matplotlib # ocr
+whitenoise # static images
+azure-cognitiveservices-speech # text to audio
